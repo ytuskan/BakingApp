@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/step_fragment_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/step_fragment_videoview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fastforward_increment="1000"
+        app:rewind_increment="1000"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.exoplayer2.ui.SimpleExoPlayerView>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing"
+        app:layout_constraintTop_toBottomOf="@+id/step_fragment_videoview">
+
+        <TextView
+            android:id="@+id/step_fragment_short_description_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="textview"
+            android:textSize="@dimen/medium_text_size"/>
+
+        <TextView
+            android:id="@+id/step_fragment_description_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="textview"
+            android:textSize="@dimen/medium_text_size"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linear"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/step_fragment_previous_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/previous"/>
+
+        <Button
+            android:layout_gravity="bottom"
+            android:id="@+id/step_fragment_next_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
